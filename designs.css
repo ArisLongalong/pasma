@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100&display=swap');
+
+:root{
+    --black: #222;
+    --white: #ffffff;
+    --light-black:#777;
+    --light-white: #fff9;
+    --dark-bg: #e8e9ed;
+    --light-bg: #f3f4f7;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --text-shadow: 0 1.5rem 3rem rgba(0,0,0,.3);
+    --light-blue: #00b2ff
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: var(--light-blue);
+}
+
+section{
+    padding: 5rem 10%;
+}
+
+@keyframes fadeIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+
+/*HEADER DESIGN STARTS*/
+.heading{
+    background-size: cover !important;
+    background-position: center !important;
+    padding-top: 14rem;
+    padding-bottom: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.heading h1{
+    font-size: 10rem;
+    text-transform: uppercase;
+    color: var(--white);
+    text-shadow: var(--text-shadow);
+    user-select: none;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--dark-bg);
+    margin-top: 1rem;
+    color: var(--black);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover{
+    background: var(--light-blue);
+}
+
+.heading-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.header .logo{
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover{
+    color: var(--light-blue);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--black);
+    display: none;
+}
+/*HEADER DESIGN ENDS*/
+
+
+
+
+/*HOME DESIGN STARTS*/
+.home{
+    padding: 0;
+}
+
+.home .slide{
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 60rem;
+}
+
+.home .slide .content{
+    width: 85rem;
+    display: none;
+}
+
+.home .swiper-slide-active .content{
+    display: inline-block;
+}
+
+.home .slide .content span{
+    display: block;
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    animation: fadeIn .3s linear backwards .2s;
+}
+
+.home .slide .content h3{
+    font-size: 3rem;
+    color: var(--white);
+    line-height: 1;
+    padding: 1rem 0;
+    animation: fadeIn .3s linear backwards .4s;
+}
+
+.home .slide .content .btn{
+    animation: fadeIn .3s linear backwards .6s;
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev{
+    top: inherit;
+    left: inherit;
+    bottom: 0;
+    right: 0;
+    height: 7rem;
+    width: 7rem;
+    background: var(--white);
+    color: var(--black);
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover{
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+.home .swiper-button-next::after,
+.home .swiper-button-prev::after{
+    font-size: 2rem;
+}
+
+.home .swiper-button-prev{
+    right: 7rem;
+}
+/*HOME DESIGN ENDS*/
+
+
+
+/*HOME-SERVICES DESIGN STARTS*/
+.home-services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+}
+
+.home-services .box-container .box{
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--light-bg);
+    cursor: pointer;
+    user-select: none;
+}
+
+.home-services .box-container .box:hover{
+    background: var(--white);
+}
+
+.home-services .box-container .box img{
+    height: 15rem;
+}
+
+.home-services .box-container .box h3{
+    color: var(--black);
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.home-services .load-more{
+    text-align: right;
+    margin-top: 2rem;
+}
+/*HOME-SERVICES DESIGN ENDS*/
+
+
+
+/*HOME-ABOUT DESIGN STARTS*/
+.home-about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-about .image{
+    flex: 1 1 41rem;
+}
+
+.home-about .image img{
+    width: 100%;
+}
+
+.home-about .content{
+    flex: 1 1 41rem;
+    padding: 3rem;
+    background: var(--light-bg);
+    user-select: none;
+}
+
+.home-about .content h3{
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.home-about .content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2;
+    color: var(--black);
+}
+/*HOME-ABOUT DESIGN ENDS*/
+
+
+
+/*HOME-APPOINTMENT DESIGN STARTS*/
+.home-appointment{
+    background: var(--light-bg);
+}
+
+.home-appointment .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.home-appointment .box-container .box{
+    border: var(--white);
+    box-shadow: var(--box-shadow);
+    background: url(images/bg\ 1.jpg);
+    height: fit-content;
+    width: fit-content;
+}
+
+.home-appointment .box-container .box .image{
+    height: 35rem;
+    overflow: hidden;
+}
+
+.home-appointment .box-container .box .image img{
+    height: 230%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.home-appointment .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+    user-select: none;
+}
+
+.home-appointment .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.home-appointment .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--light-black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.home-appointment .load-more{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #222;
+}
+/*HOME-CAREER DESIGN STARTS*/
+
+
+
+/*SERVICES DESIGN STARTS*/
+.services{
+    background: var(--light-bg);
+}
+
+.services .slide{
+    padding: 2rem;
+    border: var(--light-purple);
+    background: url(images/bg\ 1.jpg);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    user-select: none;
+}
+
+.services .slide p{
+    font-size: 1.5rem;
+    color: var(--black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.services .slide h3{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.services .slide img{
+    width: 30rem;
+    height: 30rem;
+    margin-top: 1rem;
+}
+/*SERVICES DESIGN ENDS*/
+
+
+
+/*APPOINTMENT DESIGN STARTS*/
+.calendar{
+    width: 380px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: var(--light-blue);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+.monthYear{
+    text-align: center;
+    font-weight: 600;
+    width: 150px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 4px rgba(0,0,0,.2);
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.day{
+    text-align: center;
+    padding: 5px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.dates{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.date:hover,
+.date.active{
+    background: var(--white);
+    color: #222;
+}
+
+.date.inactive{
+    color: var(--dark-bg);
+}
+
+.date.inactive:hover{
+    color: var(--light-black);
+}
+
+/*APPOINTMENT DESIGN ENDS*/
+
+
+
+/*ABOUT DESIGN STARTS*/
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.about .image{
+    flex: 1 1 41rem;
+}
+
+.about .image img{
+    width: 100%;
+}
+
+.about .content{
+    flex: 1 1 41rem;
+    text-align: center;
+    user-select: none;
+}
+
+.about .content h3{
+    font-size: 6rem;
+    color: var(--black);
+}
+
+.about .content p{
+    font-size: 2rem;
+    color: var(--black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.SLIDES{
+    background: var(--light-bg);
+}
+
+.SLIDES .slide{
+    padding: 2rem;
+    border: var(--light-purple);
+    background: url(images/bg\ 1.jpg);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    user-select: none;
+}
+
+.SLIDES .slide p{
+    font-size: 1.5rem;
+    color: var(--black);
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+.SLIDES .slide h3{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.SLIDES .slide img{
+    width: 20rem;
+    height: 30rem;
+    margin-top: 1rem;
+}
+/*ABOUT DESIGN STARTS*/
+
+
+
+/*FOOTER DESIGN STARTS*/
+.footer{
+    background: var(--white);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.footer .box-container .box h3{
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+    color: var(--black);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: block;
+}
+
+.footer .box-container .box a i{
+    color: var(--black);
+    padding-right: .5rem;
+    transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: .1rem solid var(--white);
+    font-size: 2rem;
+    color: var(--black);
+}
+/*FOOTER DESIGN ENDS*/
+
+
+
+
+
+/*MEDIA QUERIES*/
+@media (max-width:1200px){
+    .section{
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    section{
+        padding: 3rem 2rem;
+    }
+    .home .slide .content span{
+        font-size: 10vw;
+    }
+}
+
+@media (max-width: 768px){
+    #menu-btn{
+        display: inline-block;
+        transition: .2s linear;
+    }
+    #menu-btn.fa-times{
+        transform: rotate(180deg);
+    }
+    .header .navbar{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background-color: var(--white);
+        border-top: var(--border);
+        padding: 2rem;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+    }
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50px;
+    }
+    .heading-title{
+        font-size: 3.5rem;
+    }
+}
+
